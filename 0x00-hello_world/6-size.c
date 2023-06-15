@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *mainm- A code that prints size of different user types
+ *main- Aprogra that prints the various types in a computer
  * Return 0 (Success)
  */
 int main(void)
