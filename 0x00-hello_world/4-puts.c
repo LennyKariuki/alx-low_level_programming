@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
- *
+ * main - prints Programming is easy
+ Return a new line puzzle
  * Return: 0 (Success)
  */
-int main(void)
-{
-	printf("Programming is like building a multilingual puzzle\n");
 
-	return 0;
+int main(void)
+
+{
+	puts("\"Programming is like building a multilingual puzzle");
+
+	return(0);
 }
