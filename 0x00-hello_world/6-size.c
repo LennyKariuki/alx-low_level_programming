@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- *main - A program that prints the various types in a computer
+ *main - A program start
+
  * Return: 0 (Success)
  */
 int main(void)
