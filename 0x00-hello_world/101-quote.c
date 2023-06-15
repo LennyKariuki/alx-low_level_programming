@@ -1,7 +1,7 @@
 #include <unistd.h>
 
 /**
- * main - print " and that piece of art is useful" - Dora Korpar, 2015-10-19"
+ * main - print "and that piece of art is useful" - Dora Korpar, 2015-10-19",
  * followed by a new line
  * Return: Always 1.
  */
