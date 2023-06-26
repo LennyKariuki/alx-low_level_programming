@@ -5,7 +5,7 @@
  * Display
  * return: 0
  */
-void print_rev(char *s)
+void print_rev(char *a)
 {
 	int longi = 0;
 	int b;
