@@ -1,30 +1,31 @@
 #include "main.h"
 /**
  * _strcat - concatenates two strings
- * @Lenny: input value
- * @Karis: input value
+ * @dest: input value
+ * @src: input value
  * Display
  * Return: void
  */
-char *_strcat(char *Lenny, char *Karis)
+char *_strcat (char *dest, char *src)
 {
 	int a;
 	int b;
 
 	a = 0;
 	while
-	       (Lenny[a] != '\0')
+	       (src[a] != '\0')
 	{
-		a++
+		a++;
 	}
 	b = 0;
 	while
-	       (Karis[b] != '\0');
+	       (src[b] != '\0');
 	{
-		Lenny[a] = Karis[b];
+		dest[a] = src[b];
 		a++;
 		b++;
 	}
 
-	Lenny[a] = '\0';
-	return (Lenny);
+	dest[a] = '\0';
+	return (dest);
+}
