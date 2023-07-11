@@ -1,50 +1,76 @@
-#include <stdlib.h>
 #include "main.h"
-
+		
+#include <stdlib.h>
+		
 /**
- * *_realloc - reallocates a memory block using malloc and free
- * @ptr: pointer to the memory previsouly allocated by malloc
- * @old_size: size of the allocated memory for ptr
- * @new_size: new size of the new memory block
- *
- * Return: pointer to the newly allocated memory block
+		
+ * argstostr - main entry
+ * @ac: int input
+ * @av: double pointer array	
+ * Return: 0
+ * Compute and dfisplay the output
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+		
+char *argstostr(int ac, char **av)
+		
 {
-	char *ptr1;
-	char *old_ptr;
-	unsigned int k;
+		
+	int x, y, z = 0, l = 0;
+		
+	char *str;
+		
 
-	if (new_size == old_size)
-		return (ptr);
-
-	if (new_size == 0 && ptr)
-	{
-		free(ptr);
+		
+	if (ac == 0 || av == NULL)
+		
 		return (NULL);
+		
+
+		
+	for (x = 0; x < ac; x++)
+		
+	{
+		
+		for (y = 0; av[x][y]; y++)
+		
+			l++;
+		
 	}
+		
+	l += ac;
+		
 
-	if (!ptr)
-		return (malloc(new_size));
-
-	ptr1 = malloc(new_size);
-	if (!ptr1)
+		
+	str = malloc(sizeof(char) * l + 1);
+		
+	if (str == NULL)
+		
 		return (NULL);
-
-	old_ptr = ptr;
-
-	if (new_size < old_size)
+		
+	for (x = 0; x < ac; x++)
+		
 	{
-		for (k = 0; k < new_size; k++)
-			ptr1[k] = old_ptr[k];
-	}
-
-	if (new_size > old_size)
+		
+	for (y = 0; av[x][y]; y++)
+		
 	{
-		for (k = 0; k < old_size; k++)
-			ptr1[k] = old_ptr[k];
+		
+		str[z] = av[x][y];
+		
+		z++;
+		
 	}
-
-	free(ptr);
-	return (ptr1);
+		
+	if (str[z] == '\0')
+		
+	{
+		
+		str[z++] = '\n';
+		
+	}
+		
+	}
+		
+	return (str);
+		
 }
