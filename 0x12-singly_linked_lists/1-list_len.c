@@ -8,14 +8,14 @@
   */
 size_t list_len(const list_t *h)
 {
-	int k;
+	int count;
 
-	k= 0;
+	count = 0;
 
 	while (h != NULL)
 	{
 		h = h->next;
-		k++;
+		count++;
 	}
-	return (k);
+	return (count);
 }
